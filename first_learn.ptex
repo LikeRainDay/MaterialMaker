@@ -1,5 +1,24 @@
 {
-	"connections": [],
+	"connections": [
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "transform2",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 0
+		},
+		{
+			"from": "image",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 1
+		}
+	],
 	"label": "Graph",
 	"longdesc": "",
 	"name": "@Node@799",
@@ -14,8 +33,8 @@
 			},
 			"name": "Material",
 			"node_position": {
-				"x": 0.0,
-				"y": 0.0
+				"x": 256.876373291016,
+				"y": -29.7944374084473
 			},
 			"parameters": {
 				"albedo_color": {
@@ -37,6 +56,52 @@
 			},
 			"seed_int": 0,
 			"type": "material"
+		},
+		{
+			"name": "image",
+			"node_position": {
+				"x": -318.159027099609,
+				"y": -141.940658569336
+			},
+			"parameters": {
+				"clamp": false,
+				"fix_ar": false,
+				"image": "%MATERIAL_MAKER_PATH%/examples/mm_icon.png"
+			},
+			"seed_int": 0,
+			"type": "image"
+		},
+		{
+			"generic_size": 1,
+			"name": "transform2",
+			"node_position": {
+				"x": -378.859436035156,
+				"y": 120.325462341309
+			},
+			"parameters": {
+				"mode": 0.0,
+				"rotate": -14.495,
+				"scale_x": 1.0,
+				"scale_y": 1.0,
+				"translate_x": -0.08,
+				"translate_y": -0.22
+			},
+			"seed_int": 0,
+			"type": "transform2"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2",
+			"node_position": {
+				"x": -64.0047073364258,
+				"y": -46.3623313903809
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"blend_type1": 0.0
+			},
+			"seed_int": 0,
+			"type": "blend2"
 		}
 	],
 	"parameters": {
