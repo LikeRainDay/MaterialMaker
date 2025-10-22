@@ -1,0 +1,204 @@
+{
+	"connections": [
+		{
+			"from": "scale",
+			"from_port": 0,
+			"to": "transform2",
+			"to_port": 0
+		},
+		{
+			"from": "uniform_greyscale",
+			"from_port": 0,
+			"to": "transform2",
+			"to_port": 2
+		},
+		{
+			"from": "uniform_greyscale_2",
+			"from_port": 0,
+			"to": "transform2",
+			"to_port": 1
+		},
+		{
+			"from": "transform2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "shape",
+			"from_port": 0,
+			"to": "transform2_2",
+			"to_port": 0
+		},
+		{
+			"from": "transform2_2",
+			"from_port": 0,
+			"to": "scale",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@Node@4293",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": -367.0,
+				"y": 754.0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 7,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "image",
+			"node_position": {
+				"x": -507.100006103516,
+				"y": -431.0
+			},
+			"parameters": {
+				"clamp": false,
+				"fix_ar": false,
+				"image": "%MATERIAL_MAKER_PATH%/examples/mm_icon.png"
+			},
+			"seed_int": 0,
+			"type": "image"
+		},
+		{
+			"generic_size": 1,
+			"name": "scale",
+			"node_position": {
+				"x": -295.900024414062,
+				"y": -433.899993896484
+			},
+			"parameters": {
+				"cx": -0.23,
+				"cy": 0.025,
+				"scale_x": 0.1,
+				"scale_y": 0.1
+			},
+			"seed_int": 0,
+			"type": "scale"
+		},
+		{
+			"name": "uniform_greyscale",
+			"node_position": {
+				"x": -537.549987792969,
+				"y": 280.100036621094
+			},
+			"parameters": {
+				"color": "mod($time * 0.1, 1.0)"
+			},
+			"seed_int": 0,
+			"type": "uniform_greyscale"
+		},
+		{
+			"generic_size": 1,
+			"name": "transform2",
+			"node_position": {
+				"x": -229.750030517578,
+				"y": 165.800003051758
+			},
+			"parameters": {
+				"mode": 1,
+				"rotate": 0.0,
+				"scale_x": 1.0,
+				"scale_y": 1.0,
+				"translate_x": 0.395,
+				"translate_y": -0.25
+			},
+			"seed_int": 0,
+			"type": "transform2"
+		},
+		{
+			"name": "uniform_greyscale_2",
+			"node_position": {
+				"x": -530.750061035156,
+				"y": 123.900024414062
+			},
+			"parameters": {
+				"color": "mod($time * 0.1, 1.0)"
+			},
+			"seed_int": 0,
+			"type": "uniform_greyscale"
+		},
+		{
+			"name": "image_2",
+			"node_position": {
+				"x": -644.342163085938,
+				"y": 1413.48217773438
+			},
+			"parameters": {
+				"clamp": false,
+				"fix_ar": false,
+				"image": "%MATERIAL_MAKER_PATH%/examples/mm_icon.png"
+			},
+			"seed_int": 0,
+			"type": "image"
+		},
+		{
+			"generic_size": 1,
+			"name": "transform2_2",
+			"node_position": {
+				"x": -413.342163085938,
+				"y": 1217.48217773438
+			},
+			"parameters": {
+				"mode": 1,
+				"rotate": 0.0,
+				"scale_x": 0.5,
+				"scale_y": 0.5,
+				"translate_x": 0.0,
+				"translate_y": 0.0
+			},
+			"seed_int": 0,
+			"type": "transform2"
+		},
+		{
+			"name": "shape",
+			"node_position": {
+				"x": -627.193420410156,
+				"y": 1078.29064941406
+			},
+			"parameters": {
+				"edge": 0.2,
+				"radius": 0.9,
+				"shape": 0.0,
+				"sides": 2.0
+			},
+			"seed_int": 0,
+			"type": "shape"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
